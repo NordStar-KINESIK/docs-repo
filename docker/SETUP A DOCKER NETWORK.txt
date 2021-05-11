@@ -1,0 +1,34 @@
+SETUP A DOCKER NETWORK
+    
+    docker network create --driver=bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.2/64 --gateway=172.28.5.1 nsk_bridge
+
+    MANUALLY CONNECTING TO THE NETWORK
+        docker network connect nsk_bridge --ip=172.28.5.4 nskREDIS
+        docker network connect nsk_bridge --ip=172.28.5.6 nskKeyCloak
+
+
+    IP ALLOCATIONS
+        nskRedis 		- 172.28.5.4:6379
+        nskMySql 		- 172.28.5.8:3386
+        nskInventory 	- 172.28.5.2:8080
+        nskInvoice      - 172.28.5.3:8081
+        nskCart         - 172.28.5.5:8082
+
+    docker network inspect nsk_bridge
+
+
+SETUP MySQL (OPTIONAL)
+
+    FIRST_TIME_RUN - PORT 3386
+        docker run -it --network nsk_bridge --ip=172.28.5.8 --name nskMySql-001 -e MYSQL_ROOT_PASSWORD=<THE_ROOT_PASSWORD> -v C:/dockerData/mysql:/var/lib/mysql -p 3386:3306 -d mysql:latest
+
+    AFTER_FIRST_TIME_RUN - PORT 3386
+        docker run -it --network nsk_bridge --ip=172.28.5.8 --name nskMySql-001 -v C:/dockerData/mysql:/var/lib/mysql -p 3386:3306 -d mysql:latest
+
+
+SETUP KeyCloak
+
+
+DEPLOY KINESIK
+
+
