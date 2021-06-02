@@ -12,9 +12,6 @@ Repository for all documents of the nsKINESIK platform.
 | GET CONTAINER ID | docker ps |
 | GET CONTAINER LOGS | docker logs -f b472479d559a |
 
-## Issues
-[YouTrack](https://pemarquezh.myjetbrains.com/youtrack/search/Assigned%2520to%2520me-2?q=project:%20nsStore_INVENTORY)
-
 ## Service/Microservice ecosystem default Port Mappings - (For Development purposes)
 | Service Name | Port | 
 | --------| -----|
