@@ -4,15 +4,11 @@ SETUP A DOCKER NETWORK
 
     MANUALLY CONNECTING TO THE NETWORK
         docker network connect nsk_bridge --ip=172.28.5.4 nskREDIS
-        docker network connect nsk_bridge --ip=172.28.5.6 nskKeyCloak
 
 
     IP ALLOCATIONS
-        nskRedis 		- 172.28.5.4:6379
-        nskMySql 		- 172.28.5.8:3386
-        nskInventory 	- 172.28.5.2:8080
-        nskInvoice      - 172.28.5.3:8081
-        nskCart         - 172.28.5.5:8082
+        nskRedis 		- 172.28.5.4 6379:6379
+        nskKeyCloak 	- 172.28.5.6 9090:8080
 
     docker network inspect nsk_bridge
 
@@ -26,9 +22,79 @@ SETUP MySQL (OPTIONAL)
         docker run -it --network nsk_bridge --ip=172.28.5.8 --name nskMySql-001 -v C:/dockerData/mysql:/var/lib/mysql -p 3386:3306 -d mysql:latest
 
 
-SETUP KeyCloak
+START KeyCloak
+
+u. administrator
+p. T3n3r1f3!
+
+=========================================
+   STANDALONE
+=========================================
+
+    C:\KeyCloak\start-keycloak.bat
+
+        standalone.bat -Djboss.socket.binding.port-offset=1010    //   This adds "1010" to all portbindings on the server, which avoids port conflicts.
+
+
+=========================================
+   DOCKER
+=========================================
+
+		FIRST TIME RUN
+		    docker run -itd --network=nsk_bridge --ip=172.28.5.6 --name nskKeyCloak -p 8090:8080 -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e DB_VENDOR=mysql -e DB_ADDR=host.docker.internal -e DB_PORT=3306 -e DB_DATABASE=keycloak -e DB_USER=KeyCloakUser -e DB_PASSWORD=K3yCl04kU53r! jboss/keycloak -Dkeycloak.profile.feature.docker=enabled -b 0.0.0.0
+
+
+		FROM SECOND TIME AND ON
+		    docker run -itd --network=nsk_bridge --ip=172.28.5.6 --name nskKeyCloak -p 8090:8080 -e DB_VENDOR=mysql -e DB_ADDR=host.docker.internal -e DB_PORT=3306 -e DB_DATABASE=keycloak -e DB_USER=KeyCloakUser -e DB_PASSWORD=K3yCl04kU53r! jboss/keycloak -Dkeycloak.profile.feature.docker=enabled -b 0.0.0.0
+		    
+		    docker run -itd --network=nsk_bridge --ip=172.28.5.6 --name nskKeyCloak -p 8090:8080 -e DB_VENDOR=mysql -e DB_ADDR=host.docker.internal -e DB_PORT=3306 -e DB_DATABASE=keycloak -e DB_USER=KeyCloakUser -e DB_PASSWORD=K3yCl04kU53r! jboss/keycloak -Dkeycloak.profile.feature.docker=enabled -b 0.0.0.0
+
+		    //docker network connect nsk_bridge --ip=172.28.5.6 nskKeyCloak
+
+
+==============================================
+==============================================
+==============================================
+==============================================
+
+
+Realm:			NordStar			Demo-Realm
+Client:			nskInventory		springboot-microservice
+Client Secret:	58cc3256-8948-4ffa-9c87-6d2113055049
+
+CLIENT ROLES:
+                user					user
+                admin					admin
+                nsk-inventory-bot
+
+REALM ROLES:
+                app-user				user
+                app-admin				admin
+                app-nsk-inventory-bot	user,admin
+
+APP USERS
+	pmarquezh/T3n3r1f3!			app-nsk-inventory-bot
+	rgonzalezp/5t1n6r4y!		app-admin	
+	jvilarm/T3m3515!			app-user
+
+						employee1/mypassword	user
+						employee2/mypassword	admin
+						employee3/mypassword	user,admnin
+
+
+Access Token Lifespan "15 Days" [Default: 5 minutes]
+
+==============================================
+==============================================
+==============================================
+==============================================
 
 
 DEPLOY KINESIK
+
+    IP ALLOCATIONS
+        nskInventory 	- 172.28.5.2 8082:8080
+        nskInvoice      - 172.28.5.3 8083:8080
+        nskCart         - 172.28.5.5 8084:8080
 
 
