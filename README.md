@@ -22,3 +22,4 @@ Repository for all documents of the nsKINESIK platform.
 | [nskRating](https://github.com/NordStar-KINESIK/nskRating) | 8086 |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman) | 8087 |
 | [nskView](https://github.com/NordStar-KINESIK/nskView) | 8088 |
+| [nskVenue](https://github.com/NordStar-KINESIK/nskVenue) | 8090 |
