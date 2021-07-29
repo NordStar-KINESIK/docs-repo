@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "24b8b6d5-9c2e-4040-97c0-5096a5a0b7d5",
+		"name": "nskCatalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "categories/featured",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/kinesikAPI/catalog/page/1.0/section/categories/featured",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"kinesikAPI",
+								"catalog",
+								"page",
+								"1.0",
+								"section",
+								"categories",
+								"featured"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item/main",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/kinesikAPI/catalog/1.0/item/item/:itemCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"kinesikAPI",
+								"catalog",
+								"1.0",
+								"item",
+								"item",
+								":itemCode"
+							],
+							"variable": [
+								{
+									"key": "itemCode",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "item/itemRating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8085/catalogAPI/1.0/item/rating/:itemCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"catalogAPI",
+								"1.0",
+								"item",
+								"rating",
+								":itemCode"
+							],
+							"variable": [
+								{
+									"key": "itemCode",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Persist Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ratedItemCode\": 1,\r\n    \"ratedItemSku\":\"TOR_BAG_14\",\r\n    \"rating\": 5,\r\n    \"comment\": \"This is a Rating Test\",\r\n    \"raterCode\": 557\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/catalogAPI/1.0/item/review",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"catalogAPI",
+								"1.0",
+								"item",
+								"review"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
