@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "af45c79a-045b-4b8a-9ea6-2ab41bc7732c",
+		"name": "nskRating",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Rating",
+			"item": [
+				{
+					"name": "PersistNewReview",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ratedItemCode\": 1,\r\n    \"ratedItemSku\":\"TOR_BAG_14\",\r\n    \"rating\": 4,\r\n    \"comment\": \"This is a Rating Test\",\r\n    \"raterCode\": 5558\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/ratingAPI/1.0/rating/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"ratingAPI",
+								"1.0",
+								"rating",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModerateReview",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"reviewed\": true,\r\n     \"reviewedBy\": \"2f6dbe98-cf86-11eb-b8bc-0242ac130003\",\r\n     \"verifiedBuyer\": true,\r\n     \"reviewCategoryCode\": 2 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8086/ratingAPI/1.0/admin/rating/review/moderate/:reviewCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"ratingAPI",
+								"1.0",
+								"admin",
+								"rating",
+								"review",
+								"moderate",
+								":reviewCode"
+							],
+							"variable": [
+								{
+									"key": "reviewCode",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveOverallRating",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/ratingAPI/1.0/rating/retrieve/:itemCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"ratingAPI",
+								"1.0",
+								"rating",
+								"retrieve",
+								":itemCode"
+							],
+							"variable": [
+								{
+									"key": "itemCode",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RetrieveItemReview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/ratingAPI/1.0/rating/retrieveReview/:reviewCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"ratingAPI",
+								"1.0",
+								"rating",
+								"retrieveReview",
+								":reviewCode"
+							],
+							"variable": [
+								{
+									"key": "reviewCode",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Review For Moderation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/ratingAPI/1.0/admin/rating/review/:reviewCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"ratingAPI",
+								"1.0",
+								"admin",
+								"rating",
+								"review",
+								":reviewCode"
+							],
+							"variable": [
+								{
+									"key": "reviewCode",
+									"value": "28"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Reviews Pending Moderation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8086/ratingAPI/1.0/admin/rating/review/pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8086",
+							"path": [
+								"ratingAPI",
+								"1.0",
+								"admin",
+								"rating",
+								"review",
+								"pending"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
