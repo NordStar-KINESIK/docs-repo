@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "48e0b94f-5292-42bf-a7cc-73daac70eb94",
+		"name": "nskInventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Item",
+					"item": [
+						{
+							"name": "item/retrieveItemByCode",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJDdWttMFBXcFBjdWE2dVpWXzVpZEVMTW5EckVkWE9zU1lmV0lTWlZtY1ZNIn0.eyJleHAiOjE2MjA5MjcxNTksImlhdCI6MTYyMDg5MTE1OSwianRpIjoiOGEzMDRjZDItNGVmMC00OTY2LThjZjYtY2E0ZDE2NDFkNDZlIiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5MDkwL2F1dGgvcmVhbG1zL05vcmRTdGFyIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjkyYWI3OTNkLTNlMjMtNDNjYy05ZWY3LTQ1NWE0MDRjMWEwMyIsInR5cCI6IkJlYXJlciIsImF6cCI6Im5za0ludmVudG9yeSIsInNlc3Npb25fc3RhdGUiOiI4Y2RkMDM1My0zM2JhLTQ0NmUtYWExNS0xNjcxNDhhYWRlZDkiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6ODA4MSJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJhcHAtbnNrLWludmVudG9yeS1ib3QiLCJkZWZhdWx0LXJvbGVzLW5vcmRzdGFyIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJuc2tJbnZlbnRvcnkiOnsicm9sZXMiOlsiYWRtaW4iLCJ1c2VyIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6ImVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IlBhdWxvIE3DoXJxdWV6IEhlcnJlcm8iLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJwbWFycXVlemgiLCJnaXZlbl9uYW1lIjoiUGF1bG8iLCJmYW1pbHlfbmFtZSI6Ik3DoXJxdWV6IEhlcnJlcm8iLCJlbWFpbCI6Im1lQHBtYXJxdWV6aC5pbmZvIn0.BeXJG4Vb-nNEFDY-oUARFUyo1DVdDMuHIxfXIgytheDOlfWOrlKIpuFxXC4SrbpWy-DgiBCO53z8mmLzOdcnR9d3sCPINyRdfK9ae14jRkUtKOh-62el50vCItoSD3Gr4cplMMUqeRQM8AzdSRbsTmg4zPZG-6SBjdAUKDmJYkn41Jh88l7_Rb7h8upvJK29RdUPyqFZkDVjv0BltpCc6qMp9M17eV-40S2Q9IaUfw3ui7MK5FTtkRcENSI3pw5m7LOoGvN59bmkvrM6dTvsgtjV2qgkgOzFxW1hS7nWU9_ss8sXY-hfcH1iUDPoSDL0wRyinKQsk-LhSTUu5hP3jQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/retrieveItemByCode/:itemCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"retrieveItemByCode",
+										":itemCode"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null,
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "itemCode",
+											"value": "1",
+											"type": "string",
+											"description": "Code of the Item to retrieve."
+										}
+									]
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/item/retrieveItemByCode/1"
+							},
+							"response": []
+						},
+						{
+							"name": "item/retrieveItemBySKU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/retrieveItemBySKU/:itemSKU",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"retrieveItemBySKU",
+										":itemSKU"
+									],
+									"variable": [
+										{
+											"key": "itemSKU",
+											"value": "TOR_SINGLE",
+											"type": "string"
+										}
+									]
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/item/retrieveItemBySKU/{THE_SKU}"
+							},
+							"response": []
+						},
+						{
+							"name": "item/getMSUCount",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/getMSUCount/:itemCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"getMSUCount",
+										":itemCode"
+									],
+									"variable": [
+										{
+											"key": "itemCode",
+											"value": "1",
+											"type": "string",
+											"description": "Code of the item to get the MSU count."
+										}
+									]
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/item/getMSUCount/1"
+							},
+							"response": []
+						},
+						{
+							"name": "item/retrieveSKUCountsPerWarehouse",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/retrieveSKUCountsPerWarehouse/:itemCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"retrieveSKUCountsPerWarehouse",
+										":itemCode"
+									],
+									"variable": [
+										{
+											"key": "itemCode",
+											"value": "1",
+											"type": "string",
+											"description": "Code of the Item to count."
+										}
+									]
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/item/retrieveSKUCountsPerWarehouse/1"
+							},
+							"response": []
+						},
+						{
+							"name": "item/updateItemByCode",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"shortDescription\": \"Alcohol Perfumado 70%\", \r\n        \"longDescription\": \"Alcohol perfumado en Aerosol 70%\", \r\n        \"categoryCode\": 315, \r\n        \"manufacturerCode\": 8, \r\n        \"active\": true\r\n     }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/updateItem/:itemCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"updateItem",
+										":itemCode"
+									],
+									"variable": [
+										{
+											"key": "itemCode",
+											"value": "4",
+											"type": "string"
+										}
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/inventory/1.0/item/updateItem/1"
+							},
+							"response": []
+						},
+						{
+							"name": "item/updateItemSKU",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sku\": \"840000771639\", \r\n    \"description\": \"Alcohol perfumado en Aerosol 70% 400ml\", \r\n    \"manufacturerItemCode\" : \"840000771639\", \r\n    \"minUnitsPerOrder\": 1, \r\n    \"maxUnitsPerOrder\": 15, \r\n    \"saleUnitCode\": 1, \r\n    \"volume\": 400, \r\n    \"volumeUnitCode\": 6, \r\n    \"weight\": 360, \r\n    \"weightUnitCode\": 3, \r\n    \"width\": 56, \r\n    \"height\": 250, \r\n    \"depth\": 56, \r\n    \"measuresUnitCode\": 9, \r\n    \"msu\": true, \r\n    \"active\": true \r\n}    \r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/updateItemSKU/{{itemSKU}}?itemSKU=840000771639",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"updateItemSKU",
+										"{{itemSKU}}"
+									],
+									"query": [
+										{
+											"key": "itemSKU",
+											"value": "840000771639",
+											"description": "Hola"
+										}
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/inventory/1.0/item/updateItemSKU/:sku\r\n\r\nThis endpoint will update an item data, if no item exists, it will create a new item as per the expectation of a POST request."
+							},
+							"response": []
+						},
+						{
+							"name": "item/persistItemSKUs",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+											"    console.log(response.json());\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"itemCode\": 4,\r\n        \"sku\": \"840000771639\", \r\n        \"description\": \"Alcohol perfumado en Aerosol 70% 900ml\", \r\n        \"manufacturerItemCode\": \"840000771639\",\r\n        \"minUnitsPerOrder\": 1,\r\n        \"maxUnitsPerOrder\": 25,\r\n        \"saleUnitCode\": 1,\r\n        \"volume\": 900,\r\n        \"volumeUnitCode\": 6, \r\n        \"weight\": 360,\r\n        \"weightUnitCode\": 3,\r\n        \"width\": 56,\r\n        \"height\": 250, \r\n        \"depth\": 56,\r\n        \"measuresUnitCode\": 9,\r\n        \"msu\": true, \r\n        \"active\": true\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/createItemSKUs",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"createItemSKUs"
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/inventory/item/persistItemSKUs"
+							},
+							"response": []
+						},
+						{
+							"name": "item/persistItem",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.sendRequest(\"https://postman-echo.com/get\", function (err, response) {\r",
+											"    console.log(response.json());\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"itemCode\": 4,\r\n        \"sku\": \"840000771639\", \r\n        \"description\": \"Alcohol perfumado en Aerosol 70% 900ml\", \r\n        \"manufacturerItemCode\": \"840000771639\",\r\n        \"minUnitsPerOrder\": 1,\r\n        \"maxUnitsPerOrder\": 25,\r\n        \"saleUnitCode\": 1,\r\n        \"volume\": 900,\r\n        \"volumeUnitCode\": 6, \r\n        \"weight\": 360,\r\n        \"weightUnitCode\": 3,\r\n        \"width\": 56,\r\n        \"height\": 250, \r\n        \"depth\": 56,\r\n        \"measuresUnitCode\": 9,\r\n        \"msu\": true, \r\n        \"active\": true\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/createItemSKUs",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"createItemSKUs"
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/inventory/item/persistItem"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Warehouse",
+					"item": [
+						{
+							"name": "inventory/warehouse/retrieveWarehouse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/warehouse/retrieveWarehouse/{warehouseCode}"
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/warehouse/retrieveWarehouses",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/warehouse/retrieveWarehouses/{allActive}"
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/warehouse/createWarehouse",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/warehouse/createWarehouse"
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/warehouse/updateWarehouse",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/warehouse/updateWarehouse/{WarehouseCode}"
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/warehouse/deleteWarehouse",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/warehouse/deleteWarehouse/{WarehouseCode}"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"item": [
+						{
+							"name": "inventory/transaction/postTransaction",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"transactionTypeCode\": 8,\r\n        \"itemFromSKU\": \"TOR_BAG_14\",\r\n        \"warehouseToCode\": 6,\r\n        \"warehouseFromCode\": 1,\r\n        \"quantity\": 16.000\r\n    }\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/nsStoreAPI/1.0/inventory/transaction/postTransaction",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"nsStoreAPI",
+										"1.0",
+										"inventory",
+										"transaction",
+										"postTransaction"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/transaction/retrieveTransactionsPerSKU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/transaction/retrieveTransactionsPerSKU/TOR_SINGLE"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Supplier",
+					"item": [
+						{
+							"name": "item/suppliersPerItem",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/supplier/suppliersPerItem/1",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"supplier",
+										"suppliersPerItem",
+										"1"
+									]
+								},
+								"description": "/nsStoreAPI/1.0/inventory/supplier/suppliersPerItem/{itemCode}"
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/supplier/retrieveSupplier",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								},
+								"description": "http://localhost:8080/kinesikAPI/inventory/1.0/supplier/retrieveSupplier/{supplierCode}"
+							},
+							"response": []
+						},
+						{
+							"name": "inventory/supplier/createSupplier",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"procurementEntityTaxID\": \"79197214A\",\r\n    \"procurementEntityName\": \"Paulo E. Márquez Herrero\",\r\n    \"procurementEntityMainEmail\": \"paulo.marquez@gmail.com\",\r\n    \"procurementEntityAddressCode\": 0,\r\n    \"procurementEntityMainPhoneNumber\": \"\",\r\n    \"active\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/supplier/createSupplier",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"supplier",
+										"createSupplier"
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/inventory/1.0/supplier/createSupplier"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "InventoryValidation",
+					"item": [
+						{
+							"name": "validation/validateSKU",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInventory_port}}/kinesikAPI/inventory/1.0/item/retrieveItemBySKU/:itemSKU",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInventory_port}}",
+									"path": [
+										"kinesikAPI",
+										"inventory",
+										"1.0",
+										"item",
+										"retrieveItemBySKU",
+										":itemSKU"
+									],
+									"variable": [
+										{
+											"key": "itemSKU",
+											"value": "TOR_SINGLE",
+											"type": "string"
+										}
+									]
+								},
+								"description": "http://localhost:8080/nsStoreAPI/1.0/inventory/item/retrieveItemBySKU/{THE_SKU}"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
