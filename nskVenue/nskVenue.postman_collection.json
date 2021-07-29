@@ -76,6 +76,34 @@
 					"response": []
 				},
 				{
+					"name": "Delete Venue",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/:venueId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								":venueId"
+							],
+							"variable": [
+								{
+									"key": "venueId",
+									"value": "2f6dcfe6-cf86-11eb-b8bc-0242ac130003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Studio From Venue",
 					"request": {
 						"method": "PATCH",
