@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "48e860b1-9511-4988-866e-4b7251975a5f",
+		"name": "nskInvoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Invoice",
+			"item": [
+				{
+					"name": "Document",
+					"item": [
+						{
+							"name": "document/retrieveByCode",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInvoice_port}}/kinesikAPI/invoice/1.0/document/retrieveByCode/:documentCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInvoice_port}}",
+									"path": [
+										"kinesikAPI",
+										"invoice",
+										"1.0",
+										"document",
+										"retrieveByCode",
+										":documentCode"
+									],
+									"variable": [
+										{
+											"key": "documentCode",
+											"value": "1"
+										}
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/invoice/1.0/document/retrieveDocumentByCode/:documentCode"
+							},
+							"response": []
+						},
+						{
+							"name": "document/search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"response": [
+								{
+									"name": "document/search",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": null
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Draft",
+					"item": [
+						{
+							"name": "document/draft",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"documentTypeCode\": 1,\r\n    \"documentStatusCode\": 1,\r\n    \"customerCode\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInvoice_port}}/kinesikAPI/invoice/1.0/document/draft/:customerCode/:documentTypeCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInvoice_port}}",
+									"path": [
+										"kinesikAPI",
+										"invoice",
+										"1.0",
+										"document",
+										"draft",
+										":customerCode",
+										":documentTypeCode"
+									],
+									"variable": [
+										{
+											"key": "customerCode",
+											"value": "1"
+										},
+										{
+											"key": "documentTypeCode",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "document/draft/addDetail",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sku\": \"8411370011531\",\r\n    \"itemDescription\": \"Teléfono Movil Samsung\",\r\n    \"quantity\": 1.000,\r\n    \"unitPrice\": 725.00,\r\n    \"discount\": 0.0,\r\n    \"vatAliquot\": 21.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{server_url}}:{{nskInvoice_port}}/kinesikAPI/invoice/1.0/document/draft/:tempDocId/detail/add",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInvoice_port}}",
+									"path": [
+										"kinesikAPI",
+										"invoice",
+										"1.0",
+										"document",
+										"draft",
+										":tempDocId",
+										"detail",
+										"add"
+									],
+									"variable": [
+										{
+											"key": "tempDocId",
+											"value": "b495d17c-bce8-4828-ab4a-cc46528f44bd"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Util",
+					"item": [
+						{
+							"name": "util/retrieveSearchOptions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInvoice_port}}/kinesikAPI/invoice/1.0/util/retrieveSearchOptions/:onlyActive/:domain",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInvoice_port}}",
+									"path": [
+										"kinesikAPI",
+										"invoice",
+										"1.0",
+										"util",
+										"retrieveSearchOptions",
+										":onlyActive",
+										":domain"
+									],
+									"variable": [
+										{
+											"key": "onlyActive",
+											"value": "true"
+										},
+										{
+											"key": "domain",
+											"value": "DOCUMENTS"
+										}
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/invoice/1.0/document/retrieveDocumentByCode/:documentCode"
+							},
+							"response": []
+						},
+						{
+							"name": "util/retrieveOperators",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInvoice_port}}/kinesikAPI/invoice/1.0/util/retrieveOperators/:onlyActive",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInvoice_port}}",
+									"path": [
+										"kinesikAPI",
+										"invoice",
+										"1.0",
+										"util",
+										"retrieveOperators",
+										":onlyActive"
+									],
+									"variable": [
+										{
+											"key": "onlyActive",
+											"value": "true"
+										}
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/invoice/1.0/document/retrieveDocumentByCode/:documentCode"
+							},
+							"response": []
+						},
+						{
+							"name": "util/generateNextSeriesNumber",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{server_url}}:{{nskInvoice_port}}/kinesikAPI/invoice/1.0/util/generateNextSeriesNumber/:seriesCode",
+									"host": [
+										"{{server_url}}"
+									],
+									"port": "{{nskInvoice_port}}",
+									"path": [
+										"kinesikAPI",
+										"invoice",
+										"1.0",
+										"util",
+										"generateNextSeriesNumber",
+										":seriesCode"
+									],
+									"variable": [
+										{
+											"key": "seriesCode",
+											"value": "1"
+										}
+									]
+								},
+								"description": "http://localhost:8080/kinesikAPI/invoice/1.0/document/retrieveDocumentByCode/:documentCode"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
