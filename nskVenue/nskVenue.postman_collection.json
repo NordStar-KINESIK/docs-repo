@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "4cb90807-0064-4952-878b-b7013abe2971",
+		"name": "nskVenue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Venue",
+			"item": [
+				{
+					"name": "Retrieve Venue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090//venuesAPI/1.0/venue/:venueId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"",
+								"venuesAPI",
+								"1.0",
+								"venue",
+								":venueId"
+							],
+							"variable": [
+								{
+									"key": "venueId",
+									"value": "2f6dbf56-cf86-11eb-b8bc-0242ac130003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Studio to Venue",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"studioName\": \"Kami\",\r\n\t\"description\": \"Área abierta para aprácticas y entrenamientos en exteriores.\",\r\n\t\"maxCapacity\": 500,\r\n\t\"usableCapacity\": 25,\r\n\t\"active\": true\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/:venueId/studio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								":venueId",
+								"studio"
+							],
+							"variable": [
+								{
+									"key": "venueId",
+									"value": "2f6dbf56-cf86-11eb-b8bc-0242ac130003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Studio From Venue",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/studio/:studioCode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								"studio",
+								":studioCode"
+							],
+							"variable": [
+								{
+									"key": "studioCode",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
