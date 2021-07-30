@@ -30,7 +30,7 @@
 							"variable": [
 								{
 									"key": "venueId",
-									"value": "2f6dbf56-cf86-11eb-b8bc-0242ac130003"
+									"value": "00b8303b-2987-4f79-8af5-4c53f200169f"
 								}
 							]
 						}
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n\t\"studioName\": \"Kami\",\r\n\t\"description\": \"Área abierta para aprácticas y entrenamientos en exteriores.\",\r\n\t\"maxCapacity\": 500,\r\n\t\"usableCapacity\": 25,\r\n\t\"active\": true\r\n}\r\n",
+							"raw": "{\r\n\t\"studioName\": \"Studio 002\",\r\n\t\"description\": \"Studio 002 - Big One\",\r\n\t\"maxCapacity\": 50,\r\n\t\"usableCapacity\": 50,\r\n\t\"active\": true\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -68,7 +68,7 @@
 							"variable": [
 								{
 									"key": "venueId",
-									"value": "2f6dbf56-cf86-11eb-b8bc-0242ac130003"
+									"value": "00b8303b-2987-4f79-8af5-4c53f200169f"
 								}
 							]
 						}
@@ -96,7 +96,7 @@
 							"variable": [
 								{
 									"key": "venueId",
-									"value": "2f6dcfe6-cf86-11eb-b8bc-0242ac130003"
+									"value": "00b8303b-2987-4f79-8af5-4c53f200169f"
 								}
 							]
 						}
@@ -127,6 +127,37 @@
 									"key": "studioCode",
 									"value": "16"
 								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Venue",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"venueName\": \"The New Venue 001\", \r\n    \"venueEmail\": \"theNewVenue001@kinesik.eu\", \r\n    \"venuePhoneNumber\": \"+34 001 123456\", \r\n    \"active\": true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								""
 							]
 						}
 					},
