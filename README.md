@@ -13,6 +13,7 @@ Repository for all documents of the nsKINESIK platform.
 | GET CONTAINER LOGS | docker logs -f b472479d559a |
 
 ## Service/Microservice ecosystem default Port Mappings - (For Development purposes)
+### KINESIK omniStore
 | Service Name | Port | 
 | --------| -----|
 | [nskInventory](https://github.com/NordStar-KINESIK/nskInventory) | 8082 |
@@ -22,4 +23,10 @@ Repository for all documents of the nsKINESIK platform.
 | [nskRating](https://github.com/NordStar-KINESIK/nskRating) | 8086 |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman) | 8087 |
 | [nskView](https://github.com/NordStar-KINESIK/nskView) | 8088 |
+
+### KINESIK Döjo
+| Service Name | Port | 
+| --------| -----|
+| [nskDojo](https://github.com/NordStar-KINESIK/nskDojo) | 8080 |
+| [nskAccount](https://github.com/NordStar-KINESIK/nskAccount) | 8089 |
 | [nskVenue](https://github.com/NordStar-KINESIK/nskVenue) | 8090 |
