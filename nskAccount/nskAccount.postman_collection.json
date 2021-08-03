@@ -91,6 +91,43 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountName\": \"The Test Account Number Two\",\r\n    \"defaultLocale\": \"en-GB\",\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/accountAPI/1.0/account/:accountId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"accountAPI",
+						"1.0",
+						"account",
+						":accountId"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": "5ed9ee02-f4d7-4125-ad3d-bd2402947d8c"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
