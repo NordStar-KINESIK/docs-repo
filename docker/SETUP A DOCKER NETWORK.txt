@@ -25,7 +25,7 @@ SETUP MySQL (OPTIONAL)
 START KeyCloak
 
 u. administrator
-p. tf!
+p. pepe tf!
 
 =========================================
    STANDALONE
