@@ -1,0 +1,96 @@
+{
+	"info": {
+		"_postman_id": "6146b72b-eb22-4a1b-9674-d5988ac0d482",
+		"name": "nskAccount",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve Account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/accountAPI/1.0/account/:accountId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"accountAPI",
+						"1.0",
+						"account",
+						":accountId"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": "2f6dd392-cf86-11eb-b8bc-0242ac130003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8089/accountAPI/1.0/account/:accountId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"accountAPI",
+						"1.0",
+						"account",
+						":accountId"
+					],
+					"variable": [
+						{
+							"key": "accountId",
+							"value": "2ac42000-9b74-45ba-a62b-8cb8ff3b3d80"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountName\": \"Da Test Account 002\",\r\n    \"defaultLocale\": \"es-ES\",\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8089/accountAPI/1.0/account/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"accountAPI",
+						"1.0",
+						"account",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
