@@ -30,6 +30,34 @@
 							"variable": [
 								{
 									"key": "venueId",
+									"value": "2f6dbf56-cf86-11eb-b8bc-0242ac130003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Venue",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/:venueId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								":venueId"
+							],
+							"variable": [
+								{
+									"key": "venueId",
 									"value": "00b8303b-2987-4f79-8af5-4c53f200169f"
 								}
 							]
@@ -37,6 +65,79 @@
 					},
 					"response": []
 				},
+				{
+					"name": "Update Venue",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"venueName\": \"BeNature Center Tenerife\",\r\n    \"venueEmail\": \"info@benaturetenerife.com\",\r\n    \"venuePhoneNumber\": \"+34 000 999999\",\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/:venueId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								":venueId"
+							],
+							"variable": [
+								{
+									"key": "venueId",
+									"value": "2f6dbf56-cf86-11eb-b8bc-0242ac130003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Venue Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountId\": \"2f6dd392-cf86-11eb-b8bc-0242ac130003\",\r\n    \"venueName\": \"The New Venue 002\", \r\n    \"venueEmail\": \"theNewVenue002@kinesik.eu\", \r\n    \"venuePhoneNumber\": \"+34 001 123457\", \r\n    \"active\": true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Studio",
+			"item": [
 				{
 					"name": "Add Studio to Venue",
 					"request": {
@@ -76,34 +177,6 @@
 					"response": []
 				},
 				{
-					"name": "Delete Venue",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8090/venuesAPI/1.0/venue/:venueId",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8090",
-							"path": [
-								"venuesAPI",
-								"1.0",
-								"venue",
-								":venueId"
-							],
-							"variable": [
-								{
-									"key": "venueId",
-									"value": "00b8303b-2987-4f79-8af5-4c53f200169f"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Delete Studio From Venue",
 					"request": {
 						"method": "PATCH",
@@ -127,37 +200,6 @@
 									"key": "studioCode",
 									"value": "16"
 								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create Venue",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"venueName\": \"The New Venue 001\", \r\n    \"venueEmail\": \"theNewVenue001@kinesik.eu\", \r\n    \"venuePhoneNumber\": \"+34 001 123456\", \r\n    \"active\": true \r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8090/venuesAPI/1.0/venue/",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8090",
-							"path": [
-								"venuesAPI",
-								"1.0",
-								"venue",
-								""
 							]
 						}
 					},
