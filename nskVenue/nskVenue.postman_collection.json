@@ -9,7 +9,37 @@
 			"name": "Venue",
 			"item": [
 				{
-					"name": "Retrieve Venue",
+					"name": "Retrieve Venues",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/venuesAPI/1.0/venue/account/:accountId/venues",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"venuesAPI",
+								"1.0",
+								"venue",
+								"account",
+								":accountId",
+								"venues"
+							],
+							"variable": [
+								{
+									"key": "accountId",
+									"value": "2f6dd392-cf86-11eb-b8bc-0242ac130003"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Venue Copy",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -72,7 +102,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"venueName\": \"BeNature Center Tenerife\",\r\n    \"venueEmail\": \"info@benaturetenerife.com\",\r\n    \"venuePhoneNumber\": \"+34 000 999999\",\r\n    \"active\": true\r\n}",
+							"raw": "{\r\n    \"accountId\": \"2f6dd392-cf86-11eb-b8bc-0242ac130003\",\r\n    \"venueName\": \"BeNature Center Tenerife\",\r\n    \"venueEmail\": \"info@benaturetenerife.com\",\r\n    \"venuePhoneNumber\": \"+34 000 999999\",\r\n    \"active\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -103,7 +133,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Venue Copy",
+					"name": "Create Venue",
 					"request": {
 						"method": "POST",
 						"header": [],
