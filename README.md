@@ -30,3 +30,4 @@ Repository for all documents of the nsKINESIK platform.
 | [nskDojo](https://github.com/NordStar-KINESIK/nskDojo) | 8080 |
 | [nskAccount](https://github.com/NordStar-KINESIK/nskAccount) | 8089 |
 | [nskVenue](https://github.com/NordStar-KINESIK/nskVenue) | 8090 |
+| [nskPerson](https://github.com/NordStar-KINESIK/nskPerson) | 8091 |
