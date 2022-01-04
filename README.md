@@ -23,6 +23,7 @@ Repository for all documents of the nsKINESIK platform.
 | [nskRating](https://github.com/NordStar-KINESIK/nskRating) | 8086 |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman) | 8087 |
 | [nskView](https://github.com/NordStar-KINESIK/nskView) | 8088 |
+| [nsoSales](https://github.com/NordStar-OMNISTORE/nsoSales) | 8092 |
 
 ### KINESIK Döjo
 | Service Name | Port | 
