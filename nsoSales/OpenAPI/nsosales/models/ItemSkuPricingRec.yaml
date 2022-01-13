@@ -1,0 +1,13 @@
+title: ItemSkuPricingRec
+type: object
+properties:
+  sku:
+    type: string
+    example: '8412345698712'
+  prices:
+    type: array
+    items:
+      $ref: ./ItemSkuPriceRec.yaml
+required:
+  - sku
+  - prices

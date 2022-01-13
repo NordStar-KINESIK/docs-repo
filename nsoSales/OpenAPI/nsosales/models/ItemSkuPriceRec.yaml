@@ -1,0 +1,31 @@
+title: ItemSkuPriceRec
+type: object
+examples:
+  - channelCode: 1
+    channelName: General
+    rangeFrom: 1
+    rangeTo: 1
+    price: 0
+properties:
+  channelCode:
+    type: integer
+    example: 1
+    minimum: 1
+  channelName:
+    type: string
+    example: General
+  rangeFrom:
+    type: number
+    format: double
+  rangeTo:
+    type: number
+    format: double
+  price:
+    type: number
+    format: double
+required:
+  - channelCode
+  - channelName
+  - rangeFrom
+  - rangeTo
+  - price

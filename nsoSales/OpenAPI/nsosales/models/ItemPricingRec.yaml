@@ -1,0 +1,15 @@
+title: ItemPricingRec
+type: object
+properties:
+  itemCode:
+    type: integer
+  itemId:
+    type: string
+    format: uuid
+  prices:
+    type: array
+    items:
+      $ref: ./ItemSkuPricingRec.yaml
+required:
+  - itemCode
+  - prices

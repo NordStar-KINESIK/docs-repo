@@ -1,0 +1,196 @@
+openapi: 3.1.0
+info:
+  title: salesAPI
+  version: '1.0'
+  summary: REST API for the nsoSales Module of the NordStar OmniStore platform
+  description: REST API for the nsoSales Module of the NordStar OmniStore platform
+  contact:
+    name: Paulo Márquez Herrero
+    url: 'https://pmarquezh.info'
+    email: me@pmarquezh.info
+servers:
+  - url: 'http://localhost:8092'
+    description: Local Dev
+paths:
+  '/salesAPI/1.0/items/pricing/{itemCode}':
+    parameters:
+      - schema:
+          type: integer
+          example: '1'
+        name: itemCode
+        in: path
+        description: Code of the Item I want the pricing table for.
+        required: true
+    get:
+      summary: Retrieve Item Pricing Table
+      tags: []
+      responses:
+        '200':
+          description: Found - Item has a pricing table.
+          content:
+            application/json:
+              schema:
+                $ref: ../models/ItemPricingRec.yaml
+              examples:
+                example-1:
+                  value:
+                    itemCode: 0
+                    itemId: f11b669d-7201-4c21-88af-d85092f0c005
+                    prices:
+                      - sku: '8412345698712'
+                        prices:
+                          - channelCode: 1
+                            channelName: General
+                            rangeFrom: 1
+                            rangeTo: 1
+                            price: 0
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+        '404':
+          description: Not Found - Item does not have a pricing table.
+      operationId: get-1.0-items-pricing-itemCode
+      description: Retrieves the complete pricing list table for an item.
+  '/salesAPI/1.0/items/pricing/{itemCode}/{channelCode}':
+    parameters:
+      - schema:
+          type: integer
+        name: itemCode
+        in: path
+        required: true
+        description: Code of the Item we want the prices for.
+      - schema:
+          type: integer
+        name: channelCode
+        in: path
+        required: true
+        description: 'Code of the Channel we want to know the pricing for,'
+    get:
+      summary: Retrieve Item Pricing for a Channel
+      operationId: get-1.0-items-pricing-itemCode-channelCode
+      responses:
+        '200':
+          description: Found - Item has pricing elements in the given channel.
+          content:
+            application/json:
+              schema:
+                $ref: ../models/ItemPricingRec.yaml
+              examples:
+                example-1:
+                  value:
+                    itemCode: 0
+                    itemId: f11b669d-7201-4c21-88af-d85092f0c005
+                    prices:
+                      - sku: '8412345698712'
+                        prices:
+                          - channelCode: 1
+                            channelName: General
+                            rangeFrom: 1
+                            rangeTo: 1
+                            price: 0
+        '404':
+          description: Not Found - Item does not have pricing elements in the given channel.
+      description: Retrieves the pricing list for an item in a given channel.
+components:
+  schemas:
+    ItemPricingRec:
+      title: ItemPricingRec
+      type: object
+      properties:
+        itemCode:
+          type: integer
+        itemId:
+          type: string
+          format: uuid
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemSkuPricingRec'
+    ItemSkuPriceRec:
+      title: ItemSkuPriceRec
+      type: object
+      examples:
+        - channelCode: 1
+          channelName: General
+          rangeFrom: 1
+          rangeTo: 1
+          price: 0
+      properties:
+        channelCode:
+          type: integer
+          example: 1
+          minimum: 1
+        channelName:
+          type: string
+          example: General
+        rangeFrom:
+          type: number
+          format: double
+        rangeTo:
+          type: number
+          format: double
+        price:
+          type: number
+          format: double
+      required:
+        - channelCode
+        - channelName
+        - rangeFrom
+        - rangeTo
+        - price
+    ItemSkuPricingRec:
+      title: ItemSkuPricingRec
+      type: object
+      properties:
+        sku:
+          type: string
+          example: '8412345698712'
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemSkuPriceRec'
+      required:
+        - sku
+        - prices
+      examples:
+        - sku: '8412345698712'
+          prices:
+            - channelCode: 1
+              channelName: General
+              rangeFrom: 1
+              rangeTo: 1
+              price: 0
+    ItemSkuPriceRecRaw:
+      title: ItemSkuPriceRecRaw
+      type: object
+      properties:
+        sku:
+          type: string
+          example: '8412365478965'
+        itemCode:
+          type: integer
+        channelCode:
+          type: integer
+          example: 1
+          minimum: 1
+        channelName:
+          type: string
+          example: General
+        rangeFrom:
+          type: number
+          format: double
+        rangeTo:
+          type: number
+          format: double
+        price:
+          type: number
+          format: double
+      required:
+        - sku
+        - itemCode
+        - channelCode
+        - channelName
+        - rangeFrom
+        - rangeTo
+        - price
