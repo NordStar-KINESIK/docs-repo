@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: cartAPI
+  version: '1.0'
+  summary: API for the Cart service of the NordStar OmniStore platform
+  contact:
+    name: Paulo Marquez Herrero
+    url: 'https://pmarquezh.info'
+    email: me@pmarquezh.info
+servers:
+  - url: ''
+    description: DEV
+paths: {}
+components:
+  schemas:
+    CartElementRec:
+      title: CartElementRec
+      type: object
+      properties:
+        cartElementCode:
+          type: integer
+        cartId:
+          type: string
+          format: uuid
+        sku:
+          type: string
+        itemName:
+          type: string
+        quantity:
+          type: number
+          format: double
+        unitPrice:
+          type: number
+          format: double
+        unitSalePrice:
+          type: number
+          format: double
+      required:
+        - cartElementCode
+        - cartId
+        - sku
+        - itemName
+        - quantity
+        - unitPrice
+        - unitSalePrice
+    CartRec:
+      title: CartRec
+      type: object
+      properties:
+        cartId:
+          type: string
+          format: uuid
+        cartCode:
+          type: integer
+        items:
+          type:
+            - string
+            - array
+          items:
+            $ref: '#/components/schemas/CartElementRec'
