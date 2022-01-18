@@ -1,0 +1,78 @@
+openapi: 3.1.0
+info:
+  title: cartAPI
+  version: '1.0'
+  summary: API for the Cart service of the NordStar OmniStore platform
+  contact:
+    name: Paulo Marquez Herrero
+    url: 'https://pmarquezh.info'
+    email: me@pmarquezh.info
+servers:
+  - url: 'http://localhost:8084'
+    description: DEV
+paths:
+  /cartAPI/1.0/cart/create:
+    post:
+      summary: ''
+      operationId: post-cartAPI-1.0-cart-create
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CartRec'
+              examples:
+                example-1:
+                  value:
+                    cartId: a978ee3d-b7bf-468a-b84b-28f1d6366abc
+                    cartCode: 0
+                    items: string
+      description: 'Creates a temporary, empty cart for session purposes.'
+components:
+  schemas:
+    CartElementRec:
+      title: CartElementRec
+      type: object
+      properties:
+        cartElementCode:
+          type: integer
+        cartId:
+          type: string
+          format: uuid
+        sku:
+          type: string
+        itemName:
+          type: string
+        quantity:
+          type: number
+          format: double
+        unitPrice:
+          type: number
+          format: double
+        unitSalePrice:
+          type: number
+          format: double
+      required:
+        - cartElementCode
+        - cartId
+        - sku
+        - itemName
+        - quantity
+        - unitPrice
+        - unitSalePrice
+    CartRec:
+      title: CartRec
+      type: object
+      properties:
+        cartId:
+          type: string
+          format: uuid
+        cartCode:
+          type: integer
+        items:
+          type:
+            - string
+            - array
+          items:
+            $ref: '#/components/schemas/CartElementRec'

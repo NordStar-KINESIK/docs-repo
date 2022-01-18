@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "a2e34235-fea5-473d-b50a-19b5371375ae",
+		"name": "nskCart",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "cart/getItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}:{{nskCart_port}}/kinesikAPI/1.0/cart/getItems/:cartID",
+							"host": [
+								"{{server_url}}"
+							],
+							"port": "{{nskCart_port}}",
+							"path": [
+								"kinesikAPI",
+								"1.0",
+								"cart",
+								"getItems",
+								":cartID"
+							],
+							"variable": [
+								{
+									"key": "cartID",
+									"value": "600e3e0a-08e9-4189-9444-bf1d0dbeb3bb"
+								}
+							]
+						},
+						"description": "http://localhost:8080/nsStoreAPI/1.0/cart"
+					},
+					"response": []
+				},
+				{
+					"name": "cart/addItem",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\" : \"123654789\",\r\n    \"itemName\" : \"Torontos Galore\",\r\n    \"quantity\" : 5.000,\r\n    \"unitPrice\" : 3.75, \r\n    \"vatAliquot\" : 21.000,\r\n    \"unitWeight\" : 35.000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}:{{nskCart_port}}/kinesikAPI/1.0/cart/addItem/:cartID",
+							"host": [
+								"{{server_url}}"
+							],
+							"port": "{{nskCart_port}}",
+							"path": [
+								"kinesikAPI",
+								"1.0",
+								"cart",
+								"addItem",
+								":cartID"
+							],
+							"variable": [
+								{
+									"key": "cartID",
+									"value": "600e3e0a-08e9-4189-9444-bf1d0dbeb3bb"
+								}
+							]
+						},
+						"description": "/nsStoreAPI/1.0/cart/addItem/{cartID}"
+					},
+					"response": []
+				},
+				{
+					"name": "cart/createCart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}:{{nskCart_port}}/kinesikAPI/1.0/cart/createCart",
+							"host": [
+								"{{server_url}}"
+							],
+							"port": "{{nskCart_port}}",
+							"path": [
+								"kinesikAPI",
+								"1.0",
+								"cart",
+								"createCart"
+							]
+						},
+						"description": "http://localhost:8080/nsStoreAPI/1.0/cart/createCart"
+					},
+					"response": []
+				},
+				{
+					"name": "cart/retrieveCartByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}:{{nskCart_port}}/kinesikAPI/1.0/cart/retrieveCartByID/:cartID",
+							"host": [
+								"{{server_url}}"
+							],
+							"port": "{{nskCart_port}}",
+							"path": [
+								"kinesikAPI",
+								"1.0",
+								"cart",
+								"retrieveCartByID",
+								":cartID"
+							],
+							"variable": [
+								{
+									"key": "cartID",
+									"value": "600e3e0a-08e9-4189-9444-bf1d0dbeb3bb"
+								}
+							]
+						},
+						"description": "cart/retrieveCartByID"
+					},
+					"response": []
+				},
+				{
+					"name": "cart/removeItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
