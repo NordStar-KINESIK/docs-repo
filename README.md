@@ -19,11 +19,12 @@ Repository for all documents of the nsKINESIK platform.
 | [nskInventory](https://github.com/NordStar-KINESIK/nskInventory) | 8082 |
 | [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice) | 8083 |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman) | 8087 |
-| [nskView](https://github.com/NordStar-KINESIK/nskView) | 8088 |
+| [nsoView](https://github.com/NordStar-KINESIK/nskView) | 8088 |
 | [nsoCart](https://github.com/NordStar-KINESIK/nskCart) | 8084 |
 | [nsoCatalog](https://github.com/NordStar-KINESIK/nskCatalog) | 8085 |
 | [nsoRating](https://github.com/NordStar-KINESIK/nskRating) | 8086 |
 | [nsoSales](https://github.com/NordStar-OMNISTORE/nsoSales) | 8092 |
+| [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient) | 8093 |
 
 ### KINESIK Döjo
 | Service Name | Port | 
