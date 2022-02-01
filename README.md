@@ -28,6 +28,18 @@ Repository for all documents of the nsKINESIK platform.
 | [nsoSales](https://github.com/NordStar-OMNISTORE/nsoSales) | 8092 |
 | [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient) | 8093 |
 
+### NordStar Manta
+| Service Name | Port | 
+| --------| -----|
+| [nsmOperationsGateway](https://github.com/NordStar-KINESIK/nskECommGWay) | 8080 |
+| [nsmAdminGateway](https://github.com/NordStar-OMNISTORE/nsoAdminGateway) | 8081 |
+| [nsmServiceOrder](https://github.com/NordStar-MANTA/nsmServiceOrder) | 8094 |
+| [nskInventory](https://github.com/NordStar-KINESIK/nskInventory) | 8082 |
+| [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice) | 8083 |
+| [nsPostman](https://github.com/NordStar-KINESIK/nsPostman) | 8087 |
+| [nsoSales](https://github.com/NordStar-OMNISTORE/nsoSales) | 8092 |
+| [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient) | 8093 |
+
 ### NordStar KINESIK Döjo
 | Service Name | Port | 
 | --------| -----|
