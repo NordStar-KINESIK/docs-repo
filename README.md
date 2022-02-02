@@ -10,7 +10,7 @@ Repository for all documents of the nsKINESIK platform.
 | WINDOWS | docker run -p 27017:27017 -v C:/dockerData/mongo:/data/db -d mongo //   On Windows, use C:/ (Volume letter and forward slashes) |
 | STOP | docker stop <containerID> |
 | GET CONTAINER ID | docker ps |
-| GET CONTAINER LOGS | docker logs -f b472479d559a |
+| GET CONTAINER LOGS | docker logs -f <containerID> |
 
 ## Service/Microservice ecosystem default Port Mappings - (For Development purposes)
 ### NordStar OmniStore
