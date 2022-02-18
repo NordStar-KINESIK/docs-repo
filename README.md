@@ -14,6 +14,26 @@ Repository for all documents of the nsKINESIK platform.
 
 ## Service/Microservice ecosystem default Port Mappings - (For Development purposes)
 ### NordStar OmniStore
+| NAME | LOCAL DEV REPO | GITHUB REPO | DEV PORT | Docker network IP | Docker network Port | Docker Network |
+| HAVE |
+| AdminGateway |
+| CommerceGateway |
+| nskPerson | C:\PROJECTS_ROOT\nsKinesik\nskPerson |
+| junjo | C:\PROJECTS_ROOT\pers\junjo | https://github.com/pmarquez/junjo | 8100 | 172.18.0.100 | 8100 | --network nso_bridge --ip=172.18.0.100 |
+| nskAddress | C:\PROJECTS_ROOT\nsKinesik\nskAddress | https://github.com/NordStar-KINESIK/nskAddress | 8094 | 172.18.0.94 | 8094 | --network nso_bridge --ip=172.18.0.94 | 
+| nskInvoice | 
+| nskInventory | C:\PROJECTS_ROOT\nsKinesik\nskInventory | https://github.com/NordStar-KINESIK/nskInventory | 8081 | 172.18.0.81 | 8081 | --network nso_bridge --ip=172.18.0.81 | 
+| nsoCatalog | C:\PROJECTS_ROOT\nsOmniStore\nsoCatalog | https://github.com/NordStar-OMNISTORE/nsoCatalog | 8085 | 172.18.0.85 | 8085 | --network nso_bridge --ip=172.18.0.85 | 
+| nskCart | 
+| nsoRating | C:\PROJECTS_ROOT\nsKinesik\nskRating | https://github.com/NordStar-KINESIK/nskRating | 8086 | 172.18.0.86	8086 | --network nso_bridge --ip=172.18.0.86 | 
+| nskSales | C:\PROJECTS_ROOT\nsOmniStore\nsoSales | https://github.com/NordStar-OMNISTORE/nsoSales | 8092 | 172.18.0.92 | 8092 | --network nso_bridge --ip=172.18.0.92 | 
+| nskView | 
+| TO DO | 
+| CommerceAccountGateway | 
+| nskShipping | 
+| nskPayment | 
+
+
 | Service Name | Port | 
 | --------| -----|
 | [nsoCommerceGateway](https://github.com/NordStar-KINESIK/nskECommGWay) | 8080 |
@@ -25,6 +45,7 @@ Repository for all documents of the nsKINESIK platform.
 | [nsoCart](https://github.com/NordStar-KINESIK/nskCart) | 8084 |
 | [nsoCatalog](https://github.com/NordStar-OMNISTORE/nsoCatalog) | 8085 |
 | [nsoRating](https://github.com/NordStar-KINESIK/nskRating) | 8086 |
+| [nskPerson](https://github.com/NordStar-KINESIK/nskPerson) | 8091 |
 | [nsoSales](https://github.com/NordStar-OMNISTORE/nsoSales) | 8092 |
 | [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient) | 8093 |
 
@@ -37,6 +58,7 @@ Repository for all documents of the nsKINESIK platform.
 | [nskInventory](https://github.com/NordStar-KINESIK/nskInventory) | 8082 |
 | [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice) | 8083 |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman) | 8087 |
+| [nskPerson](https://github.com/NordStar-KINESIK/nskPerson) | 8091 |
 | [nsoSales](https://github.com/NordStar-OMNISTORE/nsoSales) | 8092 |
 | [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient) | 8093 |
 
