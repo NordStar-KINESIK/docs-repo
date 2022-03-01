@@ -22,7 +22,7 @@ Repository for all documents of the nsKINESIK platform.
 | [nskPerson](https://github.com/NordStar-KINESIK/nskPerson)                       |
 | [junjo](https://github.com/pmarquez/junjo)                                       |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
 | [nskAddress](https://github.com/NordStar-KINESIK/nskAddress)                     |   8094   |    172.18.0.94    |        8094         | --network nso_bridge --ip=172.18.0.94   |
-| [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice)                     |
+| [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice)                     |   8083   |    172.18.0.83    |        8083         | --network nso_bridge --ip=172.18.0.83   |
 | [nskInventory](https://github.com/NordStar-KINESIK/nskInventory)                 |   8081   |    172.18.0.81    |        8081         | --network nso_bridge --ip=172.18.0.81   |
 | [nsoCatalog](https://github.com/NordStar-OMNISTORE/nsoCatalog)                   |   8085   |    172.18.0.85    |        8085         | --network nso_bridge --ip=172.18.0.85   |
 | [nsoCart](https://github.com/NordStar-KINESIK/nskCart)                           |   8084   |    172.18.0.84    |        8084         | --network nso_bridge --ip=172.18.0.84   |
