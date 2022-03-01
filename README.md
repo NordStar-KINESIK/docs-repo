@@ -18,7 +18,7 @@ Repository for all documents of the nsKINESIK platform.
 |--------------------------------------------------------------------------|:--------:|:-----------------:|:-------------------:|:---------------------------------------:|
 | HAVE                                                                     |
 | [nsoAdminGateway](https://github.com/NordStar-OMNISTORE/nsoAdminGateway) |   8081   |
-| [nsoCommerceGateway](https://github.com/NordStar-KINESIK/nskECommGWay)   |   8080   |    172.18.0.80    |        8080         | --network nso?bridge //ip)172.18.0.80   |
+| [nsoCommerceGateway](https://github.com/NordStar-KINESIK/nskECommGWay)   |   8080   |    172.18.0.80    |        8080         | --network nso_bridge --ip=172.18.0.80   |
 | [nskPerson](https://github.com/NordStar-KINESIK/nskPerson)               |
 | [junjo](https://github.com/pmarquez/junjo)                               |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
 | [nskAddress](https://github.com/NordStar-KINESIK/nskAddress)             |   8094   |    172.18.0.94    |        8094         | --network nso_bridge --ip=172.18.0.94   |
