@@ -14,27 +14,27 @@ Repository for all documents of the nsKINESIK platform.
 
 ## Service/Microservice ecosystem default Port Mappings - (For Development purposes)
 ### NordStar OmniStore
-| Name                                                                     | Dev Port | Docker network IP | Docker network Port |             Docker Network              |
-|--------------------------------------------------------------------------|:--------:|:-----------------:|:-------------------:|:---------------------------------------:|
-| HAVE                                                                     |
-| [nsoAdminGateway](https://github.com/NordStar-OMNISTORE/nsoAdminGateway) |   8081   |
-| [nsoCommerceGateway](https://github.com/NordStar-KINESIK/nskECommGWay)   |   8080   |    172.18.0.80    |        8080         | --network nso_bridge --ip=172.18.0.80   |
-| [nskPerson](https://github.com/NordStar-KINESIK/nskPerson)               |
-| [junjo](https://github.com/pmarquez/junjo)                               |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
-| [nskAddress](https://github.com/NordStar-KINESIK/nskAddress)             |   8094   |    172.18.0.94    |        8094         | --network nso_bridge --ip=172.18.0.94   |
-| [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice)             |
-| [nskInventory](https://github.com/NordStar-KINESIK/nskInventory)         |   8081   |    172.18.0.81    |        8081         | --network nso_bridge --ip=172.18.0.81   |
-| [nsoCatalog](https://github.com/NordStar-OMNISTORE/nsoCatalog)           |   8085   |    172.18.0.85    |        8085         | --network nso_bridge --ip=172.18.0.85   |
-| [nsoCart](https://github.com/NordStar-KINESIK/nskCart)                   |   8084   |    172.18.0.84    |        8084         | --network nso_bridge --ip=172.18.0.84   |
-| [nsoRating](https://github.com/NordStar-KINESIK/nskRating)               |   8086   |    172.18.0.86    |        8086         | --network nso_bridge --ip=172.18.0.86   |
-| [nskSales](https://github.com/NordStar-OMNISTORE/nsoSales)               |   8092   |    172.18.0.92    |        8092         | --network nso_bridge --ip=172.18.0.92   |
-| [nsoView](https://github.com/NordStar-KINESIK/nskView)                   |
-| TO DO                                                                    |
-| CommerceAccountGateway                                                   |
-| nskShipping                                                              |
-| nskPayment                                                               |
-| [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient)             |   8093   |
-| [nsPostman](https://github.com/NordStar-KINESIK/nsPostman)               |   8093   |
+| Name                                                                             | Dev Port | Docker network IP | Docker network Port |             Docker Network              |
+|----------------------------------------------------------------------------------|:--------:|:-----------------:|:-------------------:|:---------------------------------------:|
+| HAVE                                                                             |
+| [nsoAdminGateway](https://github.com/NordStar-OMNISTORE/nsoAdminGateway)         |   8081   |
+| [nsoCommerceGateway](https://github.com/NordStar-OMNISTORE/nsoCommerceGateway)   |   8080   |    172.18.0.80    |        8080         | --network nso_bridge --ip=172.18.0.80   |
+| [nskPerson](https://github.com/NordStar-KINESIK/nskPerson)                       |
+| [junjo](https://github.com/pmarquez/junjo)                                       |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
+| [nskAddress](https://github.com/NordStar-KINESIK/nskAddress)                     |   8094   |    172.18.0.94    |        8094         | --network nso_bridge --ip=172.18.0.94   |
+| [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice)                     |
+| [nskInventory](https://github.com/NordStar-KINESIK/nskInventory)                 |   8081   |    172.18.0.81    |        8081         | --network nso_bridge --ip=172.18.0.81   |
+| [nsoCatalog](https://github.com/NordStar-OMNISTORE/nsoCatalog)                   |   8085   |    172.18.0.85    |        8085         | --network nso_bridge --ip=172.18.0.85   |
+| [nsoCart](https://github.com/NordStar-KINESIK/nskCart)                           |   8084   |    172.18.0.84    |        8084         | --network nso_bridge --ip=172.18.0.84   |
+| [nsoRating](https://github.com/NordStar-KINESIK/nskRating)                       |   8086   |    172.18.0.86    |        8086         | --network nso_bridge --ip=172.18.0.86   |
+| [nskSales](https://github.com/NordStar-OMNISTORE/nsoSales)                       |   8092   |    172.18.0.92    |        8092         | --network nso_bridge --ip=172.18.0.92   |
+| [nsoView](https://github.com/NordStar-KINESIK/nskView)                           |
+| TO DO                                                                            |
+| CommerceAccountGateway                                                           |
+| nskShipping                                                                      |
+| nskPayment                                                                       |
+| [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient)                     |   8093   |
+| [nsPostman](https://github.com/NordStar-KINESIK/nsPostman)                       |   8093   |
 
 ### NordStar Manta
 | Service Name | Port | 
