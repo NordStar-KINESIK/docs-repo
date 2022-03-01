@@ -25,7 +25,7 @@ Repository for all documents of the nsKINESIK platform.
 | [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice)             |
 | [nskInventory](https://github.com/NordStar-KINESIK/nskInventory)         |   8081   |    172.18.0.81    |        8081         | --network nso_bridge --ip=172.18.0.81   |
 | [nsoCatalog](https://github.com/NordStar-OMNISTORE/nsoCatalog)           |   8085   |    172.18.0.85    |        8085         | --network nso_bridge --ip=172.18.0.85   |
-| [nsoCart](https://github.com/NordStar-KINESIK/nskCart)                   |
+| [nsoCart](https://github.com/NordStar-KINESIK/nskCart)                   |   8084   |    172.18.0.84    |        8084         | --network nso_bridge --ip=172.18.0.84   |
 | [nsoRating](https://github.com/NordStar-KINESIK/nskRating)               |   8086   |    172.18.0.86    |        8086         | --network nso_bridge --ip=172.18.0.86   |
 | [nskSales](https://github.com/NordStar-OMNISTORE/nsoSales)               |   8092   |    172.18.0.92    |        8092         | --network nso_bridge --ip=172.18.0.92   |
 | [nsoView](https://github.com/NordStar-KINESIK/nskView)                   |
