@@ -33,6 +33,7 @@ Repository for all documents of the nsKINESIK platform.
 | CommerceAccountGateway                                                           |
 | nskShipping                                                                      |
 | nskPayment                                                                       |
+| nskImage                                                                         |
 | [nsoClient](https://github.com/NordStar-OMNISTORE/nsoClient)                     |   8093   |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman)                       |   8093   |
 
