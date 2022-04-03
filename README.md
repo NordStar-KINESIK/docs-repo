@@ -23,10 +23,11 @@ Repository for all documents of the nsKINESIK platform.
 | [nskInventory](https://github.com/NordStar-KINESIK/nskInventory)                 |   8082   |    172.18.0.82    |        8082         | --network nso_bridge --ip=172.18.0.82   |
 | [nskInvoice](https://github.com/NordStar-KINESIK/nskInvoice)                     |   8083   |    172.18.0.83    |        8083         | --network nso_bridge --ip=172.18.0.83   |
 | [nsoCart](https://github.com/NordStar-KINESIK/nskCart)                           |   8084   |    172.18.0.84    |        8084         | --network nso_bridge --ip=172.18.0.84   |
+| [nsoSession](https://github.com/NordStar-OMNISTORE/nsoSession)                   |   8087   |    172.18.0.87    |        8087         | --network nso_bridge --ip=172.18.0.87   |
 | [nsoCatalog](https://github.com/NordStar-OMNISTORE/nsoCatalog)                   |   8085   |    172.18.0.85    |        8085         | --network nso_bridge --ip=172.18.0.85   |
 | [nsoRating](https://github.com/NordStar-KINESIK/nskRating)                       |   8086   |    172.18.0.86    |        8086         | --network nso_bridge --ip=172.18.0.86   |
 | [nskSales](https://github.com/NordStar-OMNISTORE/nsoSales)                       |   8092   |    172.18.0.92    |        8092         | --network nso_bridge --ip=172.18.0.92   |
-| [nskClient](https://github.com/NordStar-KINESIK/nskClient)                       |   8093   |   172.18.0.93     |        8093         | --network nso_bridge --ip=172.18.0.93   |
+| [nskClient](https://github.com/NordStar-KINESIK/nskClient)                       |   8093   |    172.18.0.93    |        8093         | --network nso_bridge --ip=172.18.0.93   |
 | [nskAddress](https://github.com/NordStar-KINESIK/nskAddress)                     |   8094   |    172.18.0.94    |        8094         | --network nso_bridge --ip=172.18.0.94   |
 | [junjo](https://github.com/pmarquez/junjo)                                       |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
 | TO DO                                                                            |
