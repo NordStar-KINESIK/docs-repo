@@ -29,14 +29,15 @@ Repository for all documents of the nsKINESIK platform.
 | [nskSales](https://github.com/NordStar-OMNISTORE/nsoSales)                       |   8092   |    172.18.0.92    |        8092         | --network nso_bridge --ip=172.18.0.92   |
 | [nskClient](https://github.com/NordStar-KINESIK/nskClient)                       |   8093   |    172.18.0.93    |        8093         | --network nso_bridge --ip=172.18.0.93   |
 | [nskAddress](https://github.com/NordStar-KINESIK/nskAddress)                     |   8094   |    172.18.0.94    |        8094         | --network nso_bridge --ip=172.18.0.94   |
+| [nsoView](https://github.com/NordStar-OMNISTORE/nsoView)                         |   8096   |   172.18.0.096    |        8096         | --network nso_bridge --ip=172.18.0.96   |
 | [junjo](https://github.com/pmarquez/junjo)                                       |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
+| [nsoBooking](https://github.com/NordStar-OMNISTORE/nsoBooking)                   |   8101   |   172.18.0.101    |        8101         | --network nso_bridge --ip=172.18.0.101  |
 | TO DO                                                                            |
 | CommerceAccountGateway                                                           |
 | nskShipping                                                                      |
 | nskPayment                                                                       |
 | nskImage                                                                         |
 | [nsPostman](https://github.com/NordStar-KINESIK/nsPostman)                       |   8095   |
-| [nsoView](https://github.com/NordStar-KINESIK/nskView)                           |   8096   |
 
 ### NordStar Manta
 | Service Name | Port | 
