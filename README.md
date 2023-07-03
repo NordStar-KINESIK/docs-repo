@@ -32,6 +32,7 @@ Repository for all documents of the nsKINESIK platform.
 | [nsoView](https://github.com/NordStar-OMNISTORE/nsoView)                         |   8096   |   172.18.0.096    |        8096         | --network nso_bridge --ip=172.18.0.96   |
 | [junjo](https://github.com/pmarquez/junjo)                                       |   8100   |   172.18.0.100    |        8100         | --network nso_bridge --ip=172.18.0.100  |
 | [nsoConcierge](https://github.com/NordStar-OMNISTORE/nsoConcierge)               |   8101   |   172.18.0.101    |        8101         | --network nso_bridge --ip=172.18.0.101  |
+| [nsoPOS](https://github.com/NordStar-OMNISTORE/nsoPOS)                           |   8102   |   172.18.0.102    |        8102         | --network nso_bridge --ip=172.18.0.102  |
 | TO DO                                                                            |
 | CommerceAccountGateway                                                           |
 | nskShipping                                                                      |
